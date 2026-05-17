@@ -42,11 +42,11 @@ export default function HomePage() {
             Clareza e precisão onde o ruído predomina.
           </p>
 
-          <div className="mt-10">
+          {/*<div className="mt-10">
             <button className="bg-violet-700 hover:bg-violet-600 transition px-8 py-4 rounded-md font-medium">
               Acessar Plataforma
             </button>
-          </div>
+          </div>*/}
 
           {/* FEATURES */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-28">
