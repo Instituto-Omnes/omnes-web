@@ -25,48 +25,39 @@ const footerLinks = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#020817] text-white flex flex-col">
-      {/* HEADER (centralizado no Navbar) */}
+    <main className="min-h-screen bg-[#020817] text-white flex flex-col overflow-x-hidden">
       <Navbar active="home" />
 
-      {/* HERO */}
-      <section className="flex-1 flex items-center justify-center px-6">
-        <div className="max-w-5xl w-full py-24 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight max-w-4xl mx-auto">
+      <section className="flex-1 flex items-center justify-center px-4 sm:px-6">
+        <div className="max-w-5xl w-full py-16 sm:py-24 text-center">
+          <h1 className="font-bold leading-tight tracking-tight max-w-4xl mx-auto text-[clamp(2.5rem,8vw,5rem)]">
             Inteligência de Dados para Decisões Críticas.
           </h1>
 
-          <p className="mt-8 text-lg text-slate-300 leading-8 max-w-2xl mx-auto">
+          <p className="mt-6 sm:mt-8 text-base sm:text-lg text-slate-300 leading-7 sm:leading-8 max-w-2xl mx-auto">
             A plataforma definitiva para monitoramento analítico e
             estruturação de informações em cenários complexos.
             Clareza e precisão onde o ruído predomina.
           </p>
 
-          {/*<div className="mt-10">
-            <button className="bg-violet-700 hover:bg-violet-600 transition px-8 py-4 rounded-md font-medium">
-              Acessar Plataforma
-            </button>
-          </div>*/}
-
-          {/* FEATURES */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-16 sm:mt-24">
             {features.map((feature) => {
               const Icon = feature.icon
 
               return (
                 <div
                   key={feature.title}
-                  className="bg-slate-900/80 border border-white/5 p-8 rounded-xl text-left"
+                  className="bg-slate-900/80 border border-white/5 p-6 sm:p-8 rounded-xl text-left h-full"
                 >
-                  <div className="mb-6">
+                  <div className="mb-5 sm:mb-6">
                     <Icon className="w-7 h-7 text-violet-400" />
                   </div>
 
-                  <h3 className="text-3xl font-semibold mb-5">
+                  <h3 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-5">
                     {feature.title}
                   </h3>
 
-                  <p className="text-slate-300 leading-8">
+                  <p className="text-slate-300 leading-7 sm:leading-8 text-sm sm:text-base">
                     {feature.description}
                   </p>
                 </div>
@@ -76,12 +67,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="border-t border-white/10 bg-black/20">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col lg:flex-row items-center justify-between gap-5 text-center lg:text-left">
           <h2 className="text-xl font-bold">Omnes</h2>
 
-          <div className="flex items-center gap-6 text-sm text-slate-400">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm text-slate-400">
             {footerLinks.map((link) => (
               <Link
                 key={link.label}

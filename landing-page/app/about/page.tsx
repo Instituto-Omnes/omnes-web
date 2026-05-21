@@ -50,9 +50,9 @@ export default function AboutPage() {
       <Navbar active="about" />
 
       {/* HERO */}
-      <section className="px-6 pt-24">
+      <section className="px-4 sm:px-6 pt-16 sm:pt-24">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight max-w-4xl mx-auto">
+          <h1 className="font-bold leading-tight tracking-tight max-w-4xl mx-auto text-[clamp(2.5rem,8vw,4.5rem)]">
             Inteligência de dados para decisões críticas.
           </h1>
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES */}
-      <section className="px-6 mt-24">
+      <section className="px-4 sm:px-6 mt-16 sm:mt-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {values.map((item) => {
             const Icon = item.icon
@@ -94,7 +94,7 @@ export default function AboutPage() {
       </section>
 
       {/* TEAM */}
-      <section className="px-6 mt-32 pb-24">
+      <section className="px-4 sm:px-6 mt-20 sm:mt-32 pb-16 sm:pb-24">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h2 className="text-4xl font-bold">Nossa Equipe</h2>
@@ -105,14 +105,14 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16">
             {team.map((member) => (
               <div
                 key={member.name}
                 className="bg-slate-900/80 border border-white/5 rounded-xl overflow-hidden"
               >
                 {/* IMAGE */}
-                <div className="relative w-full h-105">
+                <div className="relative w-full aspect-4/5">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -141,7 +141,7 @@ export default function AboutPage() {
 
       {/* FOOTER */}
       <footer className="border-t border-white/10 bg-black/20">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col lg:flex-row items-center justify-between gap-5 text-center lg:text-left">
           <h2 className="text-xl font-bold">Omnes</h2>
 
           <div className="flex items-center gap-6 text-sm text-slate-400">
